@@ -31,7 +31,7 @@ let
   # can't run a binary with such a capability without being Setuid
   # itself.
   steam = pkgs.steam.override {
-    buildFHSUserEnv = pkgs.buildFHSUserEnvBubblewrap.override {
+    buildFHSEnv = pkgs.buildFHSEnvBubblewrap.override {
       bubblewrap = "${config.security.wrapperDir}/..";
     };
   };
